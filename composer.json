@@ -1,0 +1,6 @@
+{
+    "name": "jcano/tema5",
+    "require": {
+        "econea/nusoap": "^0.9.18"
+    }
+}
