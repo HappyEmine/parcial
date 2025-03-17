@@ -1,0 +1,35 @@
+
+Consumo en postman para obtener el token inciiando sesion
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope
+   xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+   xmlns:ns1="urn:servicioProductos"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+   SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+   <SOAP-ENV:Body>
+      <ns1:iniciarSesion>
+         <email xsi:type="xsd:string">santiago@gmail.com</email>
+         <password xsi:type="xsd:string">123456</password>
+      </ns1:iniciarSesion>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+
+
+Consumo en postman con el token generado
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope
+    xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:ns1="urn:servicioProductos">
+    <SOAP-ENV:Body>
+        <ns1:obtenerProductos>
+            <token>tokengenerado</token>
+        </ns1:obtenerProductos>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
